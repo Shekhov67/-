@@ -202,6 +202,9 @@ $rbt:"Roboto";
     .visible {
         display: none;
     }
+    body {
+        overflow: auto !important;
+    }
 }
 
 .info {

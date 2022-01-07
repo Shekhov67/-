@@ -196,6 +196,10 @@ a {
   .visible {
     display: none;
   }
+
+  body {
+    overflow: auto !important;
+  }
 }
 .info {
   padding: 119px 0 100px;
