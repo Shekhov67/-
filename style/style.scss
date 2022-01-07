@@ -110,6 +110,9 @@ $rbt:"Roboto";
     &__li {
         font-family: $rbt;
     }
+    &__li:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
 }
 
 .visible {
@@ -163,6 +166,11 @@ $rbt:"Roboto";
             padding-right: 32px;
         }
     }
+    .burger {
+        &__li {
+            font-size: 20px
+        }
+    }
 }
 
 @media(max-width:950px) {
@@ -190,5 +198,31 @@ $rbt:"Roboto";
 @media(min-width:950px) {
     .burger {
         display: none;
+    }
+    .visible {
+        display: none;
+    }
+}
+
+.info {
+    padding: 119px 0 100px;
+    text-align: center;
+    &__title {
+        font-family: $rbt;
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    &__text {
+        margin: 0 auto;
+        font-family: $rbt;
+        max-width: 540px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        padding-left: 32px;
+        padding-right: 32px;
     }
 }

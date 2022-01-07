@@ -110,6 +110,9 @@ a {
 .burger__li {
   font-family: "Roboto";
 }
+.burger__li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
 
 .visible {
   display: block;
@@ -161,6 +164,10 @@ a {
     padding-left: 32px;
     padding-right: 32px;
   }
+
+  .burger__li {
+    font-size: 20px;
+  }
 }
 @media (max-width: 950px) {
   .header {
@@ -184,6 +191,32 @@ a {
 @media (min-width: 950px) {
   .burger {
     display: none;
+  }
+
+  .visible {
+    display: none;
+  }
+}
+.info {
+  padding: 119px 0 100px;
+  text-align: center;
+}
+.info__title {
+  font-family: "Roboto";
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+.info__text {
+  margin: 0 auto;
+  font-family: "Roboto";
+  max-width: 540px;
+  line-height: 26px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 

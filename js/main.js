@@ -7,10 +7,15 @@ let body = document.querySelector('body');
 
 const menuBurger = () => {
     burgerMenu.classList.toggle('visible');
-    body.classList.toggle('body__scroll')
+    body.classList.toggle('body__scroll');
 }
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    window.onresize = () => {
+        if (document.documentElement.clientWidth > 950) {
+            body.classList.remove('body__scroll');
+        }
+    }
+})
 
 
 burgerBlock.addEventListener('click', () => {
