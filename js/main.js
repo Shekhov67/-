@@ -9,13 +9,7 @@ const menuBurger = () => {
     burgerMenu.classList.toggle('visible');
     body.classList.toggle('body__scroll');
 }
-document.addEventListener('DOMContentLoaded', () => {
-    window.onresize = () => {
-        if (document.documentElement.clientWidth < 950) {
-            body.classList.toggle('body__scroll');
-        }
-    }
-})
+
 
 
 burgerBlock.addEventListener('click', () => {
