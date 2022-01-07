@@ -7,28 +7,32 @@ header {
     background-color: #EEEFF1;
 }
 
+a {
+    text-decoration: none;
+}
+
 $rbt:"Roboto";
 .header {
     display: flex;
     justify-content: space-between;
     padding-top: 57px;
     align-items: center;
-    ul {
+    &__ul {
         display: flex;
         color: black;
-        li {
-            font-family: $rbt;
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            a:hover {
-                color: #34547A;
-            }
+    }
+    &__li {
+        font-family: $rbt;
+        a {
+            color: black;
+            text-decoration: none;
         }
-        li:not(:last-of-type) {
-            margin-right: 42px;
+        a:hover {
+            color: #34547A;
         }
+    }
+    &__li:not(:last-of-type) {
+        margin-right: 42px;
     }
     &__info {
         display: flex;
@@ -73,7 +77,84 @@ $rbt:"Roboto";
     }
 }
 
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    z-index: 10;
+    &__line-1 {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 5px;
+    }
+    &__line-2 {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 5px;
+    }
+    &__line-3 {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+    }
+    &__menu {
+        display: none;
+    }
+    &__ul {
+        display: flex;
+        flex-direction: column;
+    }
+    &__li {
+        font-family: $rbt;
+    }
+}
+
+.visible {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: aliceblue;
+    top: 0;
+    right: 0;
+    padding-top: 25%;
+}
+
+.body__scroll {
+    overflow: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.rotate1 {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 7px;
+    transition: .5s;
+}
+
+.rotate2 {
+    transform: rotate(132deg);
+    transition: .5s;
+}
+
 @media (min-width: 768px) {
+    .header {
+        padding-left: 32px;
+        padding-right: 32px;
+        &__info-block {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .header {
         padding-left: 32px;
         padding-right: 32px;
@@ -92,10 +173,22 @@ $rbt:"Roboto";
             align-items: center;
             text-align: center;
         }
+        &__logo {
+            margin: 0 auto;
+        }
+        &__ul {
+            display: none;
+        }
         &__info {
             img {
                 display: none;
             }
         }
+    }
+}
+
+@media(min-width:950px) {
+    .burger {
+        display: none;
     }
 }

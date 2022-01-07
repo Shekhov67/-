@@ -7,27 +7,31 @@ header {
   background-color: #EEEFF1;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding-top: 57px;
   align-items: center;
 }
-.header ul {
+.header__ul {
   display: flex;
   color: black;
 }
-.header ul li {
+.header__li {
   font-family: "Roboto";
 }
-.header ul li a {
+.header__li a {
   color: black;
   text-decoration: none;
 }
-.header ul li a:hover {
+.header__li a:hover {
   color: #34547A;
 }
-.header ul li:not(:last-of-type) {
+.header__li:not(:last-of-type) {
   margin-right: 42px;
 }
 .header__info {
@@ -72,7 +76,83 @@ header {
   letter-spacing: 0.1em;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  z-index: 10;
+}
+.burger__line-1 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+.burger__line-2 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+.burger__line-3 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+.burger__menu {
+  display: none;
+}
+.burger__ul {
+  display: flex;
+  flex-direction: column;
+}
+.burger__li {
+  font-family: "Roboto";
+}
+
+.visible {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: aliceblue;
+  top: 0;
+  right: 0;
+  padding-top: 25%;
+}
+
+.body__scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.rotate1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+  transition: 0.5s;
+}
+
+.rotate2 {
+  transform: rotate(132deg);
+  transition: 0.5s;
+}
+
 @media (min-width: 768px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .header__info-block {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 768px) {
   .header {
     padding-left: 32px;
     padding-right: 32px;
@@ -91,7 +171,18 @@ header {
     align-items: center;
     text-align: center;
   }
+  .header__logo {
+    margin: 0 auto;
+  }
+  .header__ul {
+    display: none;
+  }
   .header__info img {
+    display: none;
+  }
+}
+@media (min-width: 950px) {
+  .burger {
     display: none;
   }
 }
