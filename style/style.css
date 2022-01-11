@@ -215,12 +215,111 @@ a {
   font-family: "Roboto";
   max-width: 540px;
   line-height: 26px;
+  color: #727272;
 }
 
 @media (max-width: 768px) {
   .info {
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+.rectangle {
+  background-color: #34547A;
+  padding: 100px 0 100px;
+}
+.rectangle__project {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.rectangle__item {
+  display: flex;
+}
+.rectangle__info {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.rectangle__number {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 21px;
+  font-family: "Roboto";
+  line-height: 24px;
+}
+.rectangle__text {
+  font-family: "Roboto";
+  color: white;
+}
+
+@media (max-width: 950px) {
+  .rectangle {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 950px) {
+  .rectangle {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 345px) {
+  .rectangle {
+    text-align: center;
+  }
+  .rectangle__project {
+    justify-content: center;
+  }
+}
+.skills {
+  padding: 102px 0 101px;
+  display: flex;
+  justify-content: space-between;
+}
+.skills h2 {
+  font-family: "Roboto";
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+.skills p {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #727272;
+}
+.skills p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.skills__img {
+  max-width: 555px;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+@media (min-width: 950px) {
+  .skills {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 950px) {
+  .skills {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .skills {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills__list {
+    margin-bottom: 50px;
+  }
+  .skills__img {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 

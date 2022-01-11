@@ -220,6 +220,7 @@ $rbt:"Roboto";
         font-family: $rbt;
         max-width: 540px;
         line-height: 26px;
+        color: #727272;
     }
 }
 
@@ -227,5 +228,109 @@ $rbt:"Roboto";
     .info {
         padding-left: 32px;
         padding-right: 32px;
+    }
+}
+
+.rectangle {
+    background-color: #34547A;
+    padding: 100px 0 100px;
+    &__project {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        display: flex;
+    }
+    &__info {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__number {
+        margin-bottom: 10px;
+        color: white;
+        font-size: 21px;
+        font-family: $rbt;
+        line-height: 24px;
+    }
+    &__text {
+        font-family: $rbt;
+        color: white;
+    }
+}
+
+@media(max-width:950px) {
+    .rectangle {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media(min-width:950px) {
+    .rectangle {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media(max-width:345px) {
+    .rectangle {
+        text-align: center;
+        &__project {
+            justify-content: center;
+        }
+    }
+}
+
+.skills {
+    padding: 102px 0 101px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        font-family: $rbt;
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    p {
+        font-family: $rbt;
+        font-size: 16px;
+        color: #727272;
+    }
+    p:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    &__img {
+        max-width: 555px;
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
+
+@media(min-width:950px) {
+    .skills {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media(max-width:950px) {
+    .skills {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media(max-width:900px) {
+    .skills {
+        flex-direction: column;
+        text-align: center;
+        &__list {
+            margin-bottom: 50px;
+        }
+        &__img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 }
